@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Anitché Tjrs - Études médicales</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f8fc;
+            color: #172033;
+        }
+
+        header {
+            background: white;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #172033;
+            margin-left: 20px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 90px 20px;
+            background: #eaf4ff;
+        }
+
+        .hero h1 {
+            font-size: 46px;
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        button {
+            border: none;
+            padding: 14px 25px;
+            margin: 8px;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .primary {
+            background: #1769aa;
+            color: white;
+        }
+
+        .secondary {
+            background: white;
+            color: #1769aa;
+            border: 2px solid #1769aa;
+        }
+
+        .section {
+            padding: 60px 7%;
+            text-align: center;
+        }
+
+        .section h2 {
+            margin-bottom: 35px;
+            font-size: 30px;
+        }
+
+        .subjects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+            font-size: 18px;
+        }
+
+        .premium {
+            background: #172033;
+            color: white;
+            padding: 55px 20px;
+            text-align: center;
+        }
+
+        .premium h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background: white;
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🩺 Anitché Tjrs</div>
+
+    <nav>
+        <a href="#">Accueil</a>
+        <a href="#matieres">Matières</a>
+        <a href="#premium">Premium</a>
+    </nav>
+</header>
+
+<section class="hero">
+
+    <h1>Anitché Tjrs 🩺</h1>
+
+    <h2>Apprendre aujourd’hui et sauver des vies</h2>
+
+    <p>
+        Une plateforme moderne pour aider les étudiants en médecine
+        à apprendre, réviser et tester leurs connaissances.
+    </p>
+
+    <div class="buttons">
+        <button class="primary" onclick="commencer()">
+            Commencer à réviser
+        </button>
+
+        <button onclick="window.location.href='qcm.html'">
+    📝 Faire un QCM
+</button>
+    </div>
+
+</section>
+
+<section class="section" id="matieres">
+
+    <h2>📚 Nos matières</h2>
+
+    <div class="subjects">
+
+        <div class="card">🫀 Anatomie</div>
+
+        <div class="card">🧬 Physiologie</div>
+
+        <div class="card">💊 Pharmacologie</div>
+
+        <div class="card">🦠 Microbiologie</div>
+
+        <div class="card">🔬 Biochimie</div>
+
+        <div class="card">🩺 Sémiologie</div>
+
+    </div>
+
+</section>
+
+<section class="premium" id="premium">
+
+    <h2>💎 Anitché Tjrs Premium</h2>
+
+    <p>
+        Accède à davantage de cours, QCM, fiches de révision
+        et examens blancs.
+    </p>
+
+    <div class="buttons">
+
+        <button class="primary" onclick="window.location.href='premium.html'">
+            Découvrir Premium
+        </button>
+
+    </div>
+
+</section>
+
+<footer>
+
+    © 2026 Anitché Tjrs — Apprendre aujourd’hui et sauver des vies.
+
+</footer>
+
+<script>
+
+    function commencer() {
+        alert("Bienvenue sur Anitché Tjrs ! 🚀");
+    }
+
+    function qcm() {
+        window.location.href
+    }
+
+    function premium() {
+        alert("La section Premium arrive bientôt 💎");
+    }
+
+</script>
+
+</body>
+</html>

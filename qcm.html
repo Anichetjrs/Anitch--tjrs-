@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Anitché Tjrs QCM</title>
+</head>
+<body>
+<style>
+button {
+    padding: 12px;
+    margin: 5px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+}
+button {
+    background-color: #0d6efd;
+    color: white;
+}
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f7fb;
+}
+
+h1, h2 {
+    color: #0d6efd;
+}
+h3 {
+    background-color: white;
+    padding: 12px;
+    border-radius: 10px;
+}
+.question {
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 15px;
+}
+#scoreFinal {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 25px;
+}
+</style>
+<h1>🩺 Anitché Tjrs</h1>
+<h2>📝 QCM de médecine</h2>
+<hr>
+
+<h3>Question 1</h3>
+<div class="question">
+<p>Quel organe pompe le sang dans tout le corps ?</p>
+
+<button onclick="choisir('foie')">Le foie</button>
+<button onclick="choisir('poumon')">Le poumon</button>
+<button onclick="choisir('coeur')">Le cœur</button>
+<button onclick="choisir('rein')">Le rein</button>
+</div>
+<br>
+<p id="choix"></p>
+<button onclick="valider()">
+Valider ma réponse
+</button>
+<hr>
+
+<h3>Question 2</h3>
+<div class="question">
+<p>Quel est le plus grand organe du corps humain ?</p>
+
+<button onclick="choisir2('coeur')">Le cœur</button>
+<button onclick="choisir2('peau')">La peau</button>
+<button onclick="choisir2('foie')">Le foie</button>
+<button onclick="choisir2('rein')">Le rein</button>
+<button onclick="valider2()">
+Valider la question 2
+</button>
+</div>
+<p id="resultat2"></p>
+<h2 id="scoreFinal"></h2>
+<h3>Question 3</h3>
+<div class="question">
+<p>Combien de ventricules possède le cœur ?</p>
+
+<button onclick="choisir3('1')">1</button>
+<button onclick="choisir3('2')">2</button>
+<button onclick="choisir3('3')">3</button>
+<button onclick="choisir3('4')">4</button>
+
+<p id="resultat3"></p>
+
+<button onclick="valider3()">
+Valider la question 3
+</button>
+</div>
+<h3>Question 4</h3>
+<div class="question">
+<p>Quel organe filtre principalement le sang ?</p>
+
+<button onclick="choisir4('coeur')">Le cœur</button>
+<button onclick="choisir4('rein')">Le rein</button>
+<button onclick="choisir4('poumon')">Le poumon</button>
+<button onclick="choisir4('estomac')">L'estomac</button>
+
+<p id="resultat4"></p>
+
+<button onclick="valider4()">
+Valider la question 4
+</button>
+</div>
+<h3>Question 5</h3>
+<div class="question">
+<p>Quel est le principal muscle responsable de la respiration ?</p>
+
+<button onclick="choisir5('coeur')">Le cœur</button>
+<button onclick="choisir5('diaphragme')">Le diaphragme</button>
+<button onclick="choisir5('foie')">Le foie</button>
+<button onclick="choisir5('rein')">Le rein</button>
+
+<p id="resultat5"></p>
+
+<button onclick="valider5()">
+Valider la question 5
+</button>
+</div>
+<h3>Question 6</h3>
+<div class="question">
+<p>Quel est le rôle principal des globules rouges ?</p>
+<button onclick="choisir6('defense')">Défendre l'organisme</button>
+<button onclick="choisir6('coagulation')">Permettre la coagulation</button>
+<button onclick="choisir6('oxygene')">Transporter l'oxygène</button>
+<button onclick="choisir6('digestion')">Participer à la digestion</button>
+<p id="resultat6"></p>
+
+<button onclick="valider6()">
+Valider la question 6
+</button>
+</div>
+<h3>Question 7</h3>
+<div class="question">
+<p>Quel os est le plus long du corps humain ?</p>
+<button onclick="choisir7('tibia')">Le tibia</button>
+<button onclick="choisir7('femur')">Le fémur</button>
+<button onclick="choisir7('humerus')">L'humérus</button>
+<button onclick="choisir7('radius')">Le radius</button>
+<p id="resultat7"></p>
+
+<button onclick="valider7()">
+Valider la question 7
+</button>
+</div>
+<h3>Question 8</h3>
+<div class="question">
+<p>Quel organe produit principalement la bile ?</p>
+<button onclick="choisir8('rein')">Le rein</button>
+<button onclick="choisir8('foie')">Le foie</button>
+<button onclick="choisir8('coeur')">Le cœur</button>
+<button onclick="choisir8('poumon')">Le poumon</button>
+<p id="resultat8"></p>
+
+<button onclick="valider8()">
+Valider la question 8
+</button>
+</div>
+<h3>Question 9</h3>
+<div class="question">
+<p>Quel groupe sanguin est considéré comme donneur universel de globules rouges ?</p>
+<button onclick="choisir9('A')">A</button>
+<button onclick="choisir9('B')">B</button>
+<button onclick="choisir9('AB')">AB</button>
+<button onclick="choisir9('O')">O</button>
+<p id="resultat9"></p>
+
+<button onclick="valider9()">
+Valider la question 9
+</button>
+</div>
+<h3>Question 10</h3>
+<div class="question">
+<p>Quel est le principal organe de la respiration ?</p>
+<button onclick="choisir10('coeur')">Le cœur</button>
+<button onclick="choisir10('poumon')">Le poumon</button>
+<button onclick="choisir10('foie')">Le foie</button>
+<button onclick="choisir10('rein')">Le rein</button>
+<p id="resultat10"></p>
+
+<button onclick="valider10()">
+Valider la question 10
+</button>
+</div>
+<button onclick="window.location.href='index.html'">
+🏠 Retour à l'accueil
+</button>
+<script>
+let score = 0;
+let q1Validee = false;
+function valider() {
+    if (choix == "coeur") {
+        if (!q1Validee) {
+    score = score + 1;
+    q1Validee = true;
+}
+        document.getElementById("choix").textContent =
+        "🎉 Bonne réponse ! Score : " + score + "/1";
+    } else {
+        document.getElementById("choix").textContent =
+        "❌ Mauvaise réponse.";
+    }
+}
+let choix = "";
+let choix3 = "";
+let choix4 = ""
+let choix5 = "";
+let choix6 = "";
+let choix7 = "";
+let choix8 = "";
+let choix9 = "";
+let choix10 = "";
+let choix2 = "";
+let q2Validee = false;
+let questionsValidees = {};
+function choisir(reponse) {
+    choix = reponse;
+    alert("Réponse sélectionnée : " + reponse);
+    document.getElementById("choix").textContent =
+    "✅ Réponse sélectionnée : " + reponse;
+}
+function choisir3(reponse) {
+    choix3 = reponse;
+    alert("Réponse sélectionnée : " + reponse);
+}
+function choisir4(reponse) {
+    choix4 = reponse;
+    alert("Réponse sélectionnée : " + reponse);
+}
+function choisir5(reponse) {
+    choix5 = reponse;
+    alert("Réponse sélectionnée : " + reponse);
+}
+function choisir6(reponse) {
+    choix6 = reponse;
+    alert("Réponse sélectionnée : " + reponse);
+}
+function choisir7(reponse) {
+    choix7 = reponse;
+    alert("Réponse sélectionnée : " + reponse);
+}
+function choisir8(reponse) {
+    choix8 = reponse;
+    alert("Réponse sélectionnée : " + reponse);
+}
+function choisir9(reponse) {
+    choix9 = reponse;
+    alert("Réponse sélectionnée : " + reponse);
+}
+function choisir10(reponse) {
+    choix10 = reponse;
+    alert("Réponse sélectionnée : " + reponse);
+}
+function valider10() {
+    if (choix10 == "poumon") {
+        if (!questionsValidees[10]) {
+    score = score + 1;
+    questionsValidees[10] = true;
+}
+        document.getElementById("resultat10").textContent =
+        "🎉 Bonne réponse !";
+    } else {
+        document.getElementById("resultat10").textContent =
+        "❌ Mauvaise réponse. La bonne réponse est : Le poumon.";
+    }
+
+    document.getElementById("scoreFinal").textContent =
+    "🏆 Score final : " + score + "/10";
+}
+function valider9() {
+    if (choix9 == "O") {
+        if (!questionsValidees[9]) {
+    score = score + 1;
+    questionsValidees[9] = true;
+}
+        document.getElementById("resultat9").textContent =
+        "🎉 Bonne réponse !";
+    } else {
+        document.getElementById("resultat9").textContent =
+        "❌ Mauvaise réponse. La bonne réponse est : O négatif.";
+    }
+
+    document.getElementById("scoreFinal").textContent =
+    "🏆 Score final : " + score + "/9";
+}
+function valider8() {
+    if (choix8 == "foie") {
+        if (!questionsValidees[8]) {
+    score = score + 1;
+    questionsValidees[8] = true;
+}
+        document.getElementById("resultat8").textContent =
+        "🎉 Bonne réponse !";
+    } else {
+        document.getElementById("resultat8").textContent =
+        "❌ Mauvaise réponse. La bonne réponse est : Le foie.";
+    }
+
+    document.getElementById("scoreFinal").textContent =
+    "🏆 Score final : " + score + "/8";
+}
+function valider7() {
+    if (choix7 == "femur") {
+        if (!questionsValidees[7]) {
+    score = score + 1;
+    questionsValidees[7] = true;
+}
+        document.getElementById("resultat7").textContent =
+        "🎉 Bonne réponse !";
+    } else {
+        document.getElementById("resultat7").textContent =
+        "❌ Mauvaise réponse. La bonne réponse est : Le fémur.";
+    }
+
+    document.getElementById("scoreFinal").textContent =
+    "🏆 Score final : " + score + "/7";
+}
+function valider6() {
+    if (choix6 == "oxygene") {
+        if (!questionsValidees[6]) {
+    score = score + 1;
+    questionsValidees[6] = true;
+}
+        document.getElementById("resultat6").textContent =
+        "🎉 Bonne réponse !";
+    } else {
+        document.getElementById("resultat6").textContent =
+        "❌ Mauvaise réponse. La bonne réponse est : Transporter l'oxygène.";
+    }
+
+    document.getElementById("scoreFinal").textContent =
+    "🏆 Score final : " + score + "/6";
+}
+function valider5() {
+    if (choix5 == "diaphragme") {
+if (!questionsValidees[5]) {
+    score = score + 1;
+    questionsValidees[5] = true;
+}
+        document.getElementById("resultat5").textContent =
+        "🎉 Bonne réponse !";
+    } else {
+        document.getElementById("resultat5").textContent =
+        "❌ Mauvaise réponse. La bonne réponse est : Le diaphragme.";
+    }
+
+    document.getElementById("scoreFinal").textContent =
+    "🏆 Score final : " + score + "/5";
+}
+function valider4() {
+    if (choix4 == "rein") {
+        if (!questionsValidees[4]) {
+    score = score + 1;
+    questionsValidees[4] = true;
+}
+        document.getElementById("resultat4").textContent =
+        "🎉 Bonne réponse !";
+    } else {
+        document.getElementById("resultat4").textContent =
+        "❌ Mauvaise réponse. La bonne réponse est : Le rein.";
+    }
+
+    document.getElementById("scoreFinal").textContent =
+    "🏆 Score final : " + score + "/4";
+}
+function valider3() {
+    if (choix3 == "2") {
+        if (!questionsValidees[3]) {
+    score = score + 1;
+    questionsValidees[3] = true;
+}
+        document.getElementById("resultat3").textContent =
+        "🎉 Bonne réponse !";
+    } else {
+        document.getElementById("resultat3").textContent =
+        "❌ Mauvaise réponse. La bonne réponse est : 2.";
+    }
+
+    document.getElementById("scoreFinal").textContent =
+    "🏆 Score final : " + score + "/3";
+}
+function choisir2(reponse) {
+    choix2 = reponse;
+    alert("Réponse sélectionnée : " + reponse);
+}
+function valider2() {
+
+    if (choix2 == "peau") {
+        if (!q2Validee) {
+    score = score + 1;
+    q2Validee = true;
+}
+        document.getElementById("scoreFinal").textContent =
+"🏆 Score final : " + score + "/2";
+        document.getElementById("resultat2").textContent =
+        "🎉 Bonne réponse ! Score : " + score + "/2";
+    } else {
+        document.getElementById("resultat2").textContent =
+        "❌ Mauvaise réponse. La bonne réponse est : La peau.";
+    }
+document.getElementById("scoreFinal").textContent =
+"🏆 Score final : " + score + "/2";
+}
+</script>
+</body>
+</html>
+</script>
